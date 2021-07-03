@@ -1,0 +1,132 @@
+.header {
+  min-height: 33.75rem;
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("/images/mobile/image-header.jpg");
+  @include breakpoint-up(medium) {
+    background-image: url("/images/desktop/image-header.jpg");
+  }
+  @include breakpoint-up(large) {
+    min-height: 100vh;
+  }
+
+  &__logo {
+    img {
+      width: 7.875rem;
+      height: 1.625rem;
+    }
+  }
+
+  &__links {
+    a {
+      display: inline-block;
+      font-size: 1rem;
+      &:not(:last-child) {
+        color: $white;
+        margin-right: 3rem;
+        transition: color 300ms ease-in-out;
+        &:hover {
+          color: black;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    color: black;
+    padding: 1.375rem 2rem;
+    background-color: $white;
+    border-radius: 35px;
+    text-transform: uppercase;
+    font-family: "Fraunces", serif;
+    transition: color, background-color 300ms ease-in-out;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+      color: $white;
+    }
+  }
+
+  &__menu {
+    position: fixed;
+    width: calc(100% - 3rem);
+    right: 0px;
+    background-color: white;
+    top: 108px;
+    padding: 0px 96px;
+    z-index: 1;
+    margin: 0px 24px;
+    max-width: 327px;
+    visibility: hidden;
+
+    &.unhidden {
+      // display: block;
+      animation: unhid 300ms forwards;
+    }
+
+    &.hidden {
+      animation: hid 300ms forwards;
+    }
+    a {
+      display: block;
+      color: $darkgrayishblue;
+      padding: 21px;
+      text-align: center;
+
+      &:first-child {
+        padding-top: 24px;
+      }
+      &:last-child {
+        padding: 1.5rem 2rem;
+        background-color: $yellow;
+        border-radius: 50px;
+        color: black;
+        font-family: "Fraunces", serif;
+        margin-top: 0.625rem;
+        margin-bottom: 2.5rem;
+      }
+    }
+  }
+
+  &__text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 4.125rem;
+    text-align: center;
+    @include breakpoint-up(medium) {
+      width: 100%;
+    }
+    @include breakpoint-up(large) {
+      padding-top: 8.125rem;
+    }
+    img {
+      margin-top: 2.25rem;
+      @include breakpoint-up(large) {
+        margin-top: 9rem;
+      }
+    }
+  }
+}
+
+@keyframes unhid {
+  from {
+    visibility: hidden;
+    right: -40%;
+  }
+  to {
+    visibility: visible;
+    right: 0%;
+  }
+}
+@keyframes hid {
+  from {
+    visibility: visible;
+    right: 0%;
+  }
+  to {
+    visibility: hidden;
+    right: -40%;
+  }
+}
