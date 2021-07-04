@@ -17,8 +17,12 @@
     a {
       font-size: 16px;
       color: $darkmoderatecyan;
+      transition: color 300ms ease-in-out;
       @include breakpoint-up(medium) {
         font-size: 18px;
+      }
+      &:hover {
+        color: $white;
       }
       &:not(:last-child) {
         margin-right: 46px;
@@ -32,6 +36,9 @@
       margin-bottom: 72px;
     }
     a {
+      &:hover svg path {
+        fill: $white;
+      }
       &:not(:last-child) {
         margin-right: 28px;
       }

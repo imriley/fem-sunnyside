@@ -629,12 +629,17 @@ a:hover {
 .footer__links a {
   font-size: 16px;
   color: #458c7e;
+  transition: color 300ms ease-in-out;
 }
 
 @media (min-width: 40em) {
   .footer__links a {
     font-size: 18px;
   }
+}
+
+.footer__links a:hover {
+  color: white;
 }
 
 .footer__links a:not(:last-child) {
@@ -650,6 +655,10 @@ a:hover {
   .footer__social {
     margin-bottom: 72px;
   }
+}
+
+.footer__social a:hover svg path {
+  fill: white;
 }
 
 .footer__social a:not(:last-child) {
