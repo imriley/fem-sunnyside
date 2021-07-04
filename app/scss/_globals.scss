@@ -21,7 +21,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-weight: 700;
   font-family: "Fraunces", serif;
   margin-top: 0;
@@ -43,6 +44,27 @@ h2 {
   font-weight: 800;
   @include breakpoint-up(large) {
     font-size: 2rem;
+  }
+}
+
+h3 {
+  font-size: 0.9375rem;
+  letter-spacing: 0.3125rem;
+  text-transform: uppercase;
+  text-align: center;
+  @include breakpoint-up(large) {
+    font-size: 1.125rem;
+    letter-spacing: 0.375rem;
+  }
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: 900;
+  color: $verydarkdesaturatedblue;
+  margin-bottom: 0;
+  @include breakpoint-up(medium) {
+    font-size: 18px;
   }
 }
 
@@ -75,6 +97,7 @@ a:hover {
     display: none;
   }
 }
+
 .hide-for-desktop {
   @include breakpoint-up(large) {
     display: none;

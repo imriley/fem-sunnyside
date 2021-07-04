@@ -1,0 +1,54 @@
+.testimonial {
+  h3 {
+    padding: 4.25rem 45px;
+    margin-bottom: 0;
+  }
+
+  &__grid {
+    display: grid;
+    max-width: 1100px;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    gap: 68px;
+    @include breakpoint-up(large) {
+      gap: 0px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__item {
+    text-align: center;
+    padding: 0px 40px;
+    @include breakpoint-up(large) {
+      padding: 0px;
+      &:not(:last-child) {
+        padding-right: 32px;
+      }
+    }
+  }
+
+  &__image {
+    height: 4.6875rem;
+    width: 4.6875rem;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+
+  &__description {
+    font-size: 16px;
+    padding: 42px 0px;
+    @include breakpoint-up(medium) {
+      font-size: 18px;
+      padding: 66px 0px 82px 0px;
+      line-height: 32px;
+    }
+  }
+
+  &__job {
+    font-size: 14px;
+    padding-top: 16px;
+  }
+}
