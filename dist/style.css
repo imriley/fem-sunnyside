@@ -601,4 +601,72 @@ a:hover {
     background-position: center;
   }
 }
+
+.footer {
+  background-color: #91d4c6;
+  text-align: center;
+}
+
+.footer__logo {
+  display: block;
+  margin-top: 4rem;
+}
+
+@media (min-width: 40em) {
+  .footer__logo {
+    margin-top: 4.5rem;
+  }
+}
+
+.footer__logo svg path {
+  fill: #25564b;
+}
+
+.footer__links {
+  margin-top: 46px;
+}
+
+.footer__links a {
+  font-size: 16px;
+  color: #458c7e;
+}
+
+@media (min-width: 40em) {
+  .footer__links a {
+    font-size: 18px;
+  }
+}
+
+.footer__links a:not(:last-child) {
+  margin-right: 46px;
+}
+
+.footer__social {
+  margin-top: 92px;
+  margin-bottom: 80px;
+}
+
+@media (min-width: 40em) {
+  .footer__social {
+    margin-bottom: 72px;
+  }
+}
+
+.footer__social a:not(:last-child) {
+  margin-right: 28px;
+}
+
+.attribution {
+  color: #458c7e;
+  text-align: center;
+}
+
+.attribution a {
+  color: white;
+  transition: color 300ms ease-in-out;
+}
+
+.attribution a:hover {
+  color: #25564b;
+}
 /*# sourceMappingURL=style.css.map */

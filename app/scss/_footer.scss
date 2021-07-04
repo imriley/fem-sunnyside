@@ -1,0 +1,51 @@
+.footer {
+  background-color: $footergreen;
+  text-align: center;
+
+  &__logo {
+    display: block;
+    margin-top: 4rem;
+    @include breakpoint-up(medium) {
+      margin-top: 4.5rem;
+    }
+    svg path {
+      fill: $darkdesaturatedcyan;
+    }
+  }
+  &__links {
+    margin-top: 46px;
+    a {
+      font-size: 16px;
+      color: $darkmoderatecyan;
+      @include breakpoint-up(medium) {
+        font-size: 18px;
+      }
+      &:not(:last-child) {
+        margin-right: 46px;
+      }
+    }
+  }
+  &__social {
+    margin-top: 92px;
+    margin-bottom: 80px;
+    @include breakpoint-up(medium) {
+      margin-bottom: 72px;
+    }
+    a {
+      &:not(:last-child) {
+        margin-right: 28px;
+      }
+    }
+  }
+}
+.attribution {
+  color: $darkmoderatecyan;
+  text-align: center;
+  a {
+    color: $white;
+    transition: color 300ms ease-in-out;
+    &:hover {
+      color: $darkdesaturatedcyan;
+    }
+  }
+}
