@@ -525,4 +525,80 @@ a:hover {
   font-size: 14px;
   padding-top: 16px;
 }
+
+.collage__flex {
+  display: flex;
+  min-height: 376px;
+  flex-wrap: wrap;
+  margin-top: 92px;
+}
+
+@media (min-width: 64em) {
+  .collage__flex {
+    margin-top: 164px;
+    min-height: 448px;
+  }
+}
+
+.collage__item {
+  flex: 50%;
+}
+
+@media (min-width: 40em) {
+  .collage__item {
+    flex: 25%;
+  }
+}
+
+.collage__image__one {
+  background-image: url("/images/mobile/image-gallery-milkbottles.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+@media (min-width: 64em) {
+  .collage__image__one {
+    background-image: url("/images/desktop/image-gallery-milkbottles.jpg");
+    background-position: center;
+  }
+}
+
+.collage__image__two {
+  background-image: url("/images/mobile/image-gallery-orange.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+@media (min-width: 64em) {
+  .collage__image__two {
+    background-image: url("/images/desktop/image-gallery-orange.jpg");
+    background-position: center;
+  }
+}
+
+.collage__image__three {
+  background-image: url("/images/mobile/image-gallery-cone.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+@media (min-width: 64em) {
+  .collage__image__three {
+    background-image: url("/images/desktop/image-gallery-cone.jpg");
+    background-position: center;
+  }
+}
+
+.collage__image__four {
+  background-image: url("/images/mobile/image-gallery-sugar-cubes.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+@media (min-width: 64em) {
+  .collage__image__four {
+    background-image: url("/images/desktop/image-gallery-sugarcubes.jpg");
+    background-position: center;
+  }
+}
 /*# sourceMappingURL=style.css.map */

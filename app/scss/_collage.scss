@@ -1,0 +1,56 @@
+.collage {
+  &__flex {
+    display: flex;
+    min-height: 376px;
+    flex-wrap: wrap;
+    margin-top: 92px;
+    @include breakpoint-up(large) {
+      margin-top: 164px;
+      min-height: 448px;
+    }
+  }
+  &__item {
+    flex: 50%;
+    @include breakpoint-up(medium) {
+      flex: 25%;
+    }
+  }
+  &__image {
+    &__one {
+      background-image: url("/images/mobile/image-gallery-milkbottles.jpg");
+      background-size: cover;
+      background-position: center center;
+      @include breakpoint-up(large) {
+        background-image: url("/images/desktop/image-gallery-milkbottles.jpg");
+        background-position: center;
+      }
+    }
+    &__two {
+      background-image: url("/images/mobile/image-gallery-orange.jpg");
+      background-size: cover;
+      background-position: center center;
+      @include breakpoint-up(large) {
+        background-image: url("/images/desktop/image-gallery-orange.jpg");
+        background-position: center;
+      }
+    }
+    &__three {
+      background-image: url("/images/mobile/image-gallery-cone.jpg");
+      background-size: cover;
+      background-position: center center;
+      @include breakpoint-up(large) {
+        background-image: url("/images/desktop/image-gallery-cone.jpg");
+        background-position: center;
+      }
+    }
+    &__four {
+      background-image: url("/images/mobile/image-gallery-sugar-cubes.jpg");
+      background-size: cover;
+      background-position: center center;
+      @include breakpoint-up(large) {
+        background-image: url("/images/desktop/image-gallery-sugarcubes.jpg");
+        background-position: center;
+      }
+    }
+  }
+}
