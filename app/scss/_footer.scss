@@ -36,6 +36,9 @@
       margin-bottom: 72px;
     }
     a {
+      svg path {
+        transition: fill 300ms ease-in-out;
+      }
       &:hover svg path {
         fill: $white;
       }

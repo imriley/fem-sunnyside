@@ -657,6 +657,10 @@ a:hover {
   }
 }
 
+.footer__social a svg path {
+  transition: fill 300ms ease-in-out;
+}
+
 .footer__social a:hover svg path {
   fill: white;
 }
