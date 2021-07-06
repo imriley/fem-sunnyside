@@ -40,12 +40,6 @@
     font-family: "Fraunces", serif;
     text-transform: uppercase;
     font-weight: 700;
-
-    &:hover {
-      &::after {
-        opacity: 1;
-      }
-    }
   }
 }
 
@@ -64,18 +58,25 @@
     }
   }
 
-  a::after {
-    content: "";
-    display: block;
-    height: 10px;
-    width: 138px;
-    margin: 0 auto;
-    margin-top: -10px;
-    background-color: $yellow;
-    opacity: 0.25;
-    border-radius: 10px;
-    @include breakpoint-up(medium) {
-      margin-left: -5px;
+  a {
+    &::after {
+      content: "";
+      display: block;
+      height: 10px;
+      width: 138px;
+      margin: 0 auto;
+      margin-top: -10px;
+      background-color: rgba($yellow, 0.25);
+      border-radius: 10px;
+      transition: 300ms background-color ease-in-out;
+      @include breakpoint-up(medium) {
+        margin-left: -5px;
+      }
+    }
+    &:hover {
+      &::after {
+        background-color: rgba($yellow, 1);
+      }
     }
   }
 }
@@ -95,18 +96,25 @@
     }
   }
 
-  a::after {
-    content: "";
-    display: block;
-    height: 10px;
-    width: 138px;
-    margin: 0 auto;
-    margin-top: -10px;
-    background-color: $softred;
-    opacity: 0.25;
-    border-radius: 10px;
-    @include breakpoint-up(medium) {
-      margin-left: -5px;
+  a {
+    &::after {
+      content: "";
+      display: block;
+      height: 10px;
+      width: 138px;
+      margin: 0 auto;
+      margin-top: -10px;
+      background-color: rgba($softred, 0.25);
+      border-radius: 10px;
+      transition: 300ms background-color ease-in-out;
+      @include breakpoint-up(medium) {
+        margin-left: -5px;
+      }
+    }
+    &:hover {
+      &::after {
+        background-color: rgba($softred, 1);
+      }
     }
   }
 }
@@ -119,6 +127,13 @@
   @include breakpoint-up(medium) {
     flex-direction: row;
     height: 37.5rem;
+  }
+
+  h3 {
+    font-size: 1.5625rem;
+    text-transform: none;
+    font-weight: 900;
+    letter-spacing: 1px;
   }
 
   &-pt-one {

@@ -326,10 +326,6 @@ a:hover {
   font-weight: 700;
 }
 
-.section a:hover::after {
-  opacity: 1;
-}
-
 .sec-one-image {
   flex: 50%;
   width: 100%;
@@ -354,15 +350,19 @@ a:hover {
   width: 138px;
   margin: 0 auto;
   margin-top: -10px;
-  background-color: #fad400;
-  opacity: 0.25;
+  background-color: rgba(250, 212, 0, 0.25);
   border-radius: 10px;
+  transition: 300ms background-color ease-in-out;
 }
 
 @media (min-width: 40em) {
   .sec-one a::after {
     margin-left: -5px;
   }
+}
+
+.sec-one a:hover::after {
+  background-color: #fad400;
 }
 
 .sec-two-image {
@@ -389,15 +389,19 @@ a:hover {
   width: 138px;
   margin: 0 auto;
   margin-top: -10px;
-  background-color: #fe7867;
-  opacity: 0.25;
+  background-color: rgba(254, 120, 103, 0.25);
   border-radius: 10px;
+  transition: 300ms background-color ease-in-out;
 }
 
 @media (min-width: 40em) {
   .sec-two a::after {
     margin-left: -5px;
   }
+}
+
+.sec-two a:hover::after {
+  background-color: #fe7867;
 }
 
 .sec-three {
@@ -412,6 +416,13 @@ a:hover {
     flex-direction: row;
     height: 37.5rem;
   }
+}
+
+.sec-three h3 {
+  font-size: 1.5625rem;
+  text-transform: none;
+  font-weight: 900;
+  letter-spacing: 1px;
 }
 
 .sec-three-pt-one {
